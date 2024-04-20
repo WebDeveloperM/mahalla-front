@@ -7,7 +7,7 @@ import BASE_URL from '../../utils/urls'
 
 function DistrictTable() {
     const [districts, setDistricts] = useState(null)
-    const {id} = useParams()
+    const {id, region} = useParams()
     useEffect(
         () => {
             axios.get(`${BASE_URL}district/${id}/`)
@@ -20,14 +20,10 @@ function DistrictTable() {
                 })
         }, []
     )
-    let name = "Ushbu"
-    if (districts &&  districts[0]) {
-            name = districts[0].name
-    }
 
     return (
         <section>
-            <h2 className={'text-center fs-6 my-4'}>{districts != null ? name : ""} viloyati
+            <h2 className={'text-center fs-6 my-4'}>{region} viloyati
                 bo`yicha
                 mahalla
                 balansi.</h2>
