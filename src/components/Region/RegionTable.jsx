@@ -10,7 +10,14 @@ function RegionTable() {
 
     useEffect(
         () => {
-            axios.get(`${BASE_URL}region/`, {headers: {'Access-Control-Allow-Origin': ['https://mahalla-back-1.onrender.com/', 'https://mahalla-online.onrender.com/']}})
+            axios.get(`${BASE_URL}region/`,
+            //     {
+            //     headers: {
+            //         'Access-Control-Allow-Origin':
+            //             ['https://mahalla-back-1.onrender.com/', 'https://mahalla-online.onrender.com/', 'http://localhost:3000']
+            //     }
+            // }
+            )
                 .then(res => {
                     setRegions(res.data)
                     console.log(res.data, "9999999999999999999999999999")
@@ -29,7 +36,7 @@ function RegionTable() {
 
             <table className="table table-bordered table-striped fs-6">
                 <RegionHead/>
-                { regions ?
+                {regions ?
                     <RegionBody regions={regions}/>
                     : ""
                 }
