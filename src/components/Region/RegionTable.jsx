@@ -10,7 +10,7 @@ function RegionTable() {
 
     useEffect(
         () => {
-            axios.get(`${BASE_URL}region/`)
+            axios.get(`${BASE_URL}region/`, {headers: {'Access-Control-Allow-Origin': '*'}})
                 .then(res => {
                     setRegions(res.data)
                     console.log(res.data, "9999999999999999999999999999")
