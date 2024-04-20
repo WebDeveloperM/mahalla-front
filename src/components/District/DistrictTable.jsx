@@ -23,11 +23,7 @@ function DistrictTable() {
 
     return (
         <section>
-            <h2 className={'text-center fs-6 my-4'}>{region} viloyati
-                bo`yicha
-                mahalla
-                balansi.</h2>
-
+            <h2 className={'text-center fs-6 my-4'}>{region} viloyati bo`yicha mahalla balansi.</h2>
 
             <table className="table table-bordered table-striped fs-6">
                 <DistrictHead/>
@@ -42,6 +38,5 @@ function DistrictTable() {
 
     )
 }
-
 
 export default DistrictTable

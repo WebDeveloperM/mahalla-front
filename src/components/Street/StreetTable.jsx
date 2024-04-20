@@ -21,8 +21,6 @@ function StreetTable() {
     )
 
     return (
-
-
         <>
             <h2 className={'text-center fs-6 my-4'}>{neighborhood} mahalasi bo`yicha mahalla balansi.</h2>
 

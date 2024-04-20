@@ -19,7 +19,6 @@ function PersonTable() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-
     useEffect(
         () => {
             axios.get(`${BASE_URL}person/${id}/`)
@@ -33,7 +32,6 @@ function PersonTable() {
     )
 
     return (
-
         <>
             <h2 className={'text-center fs-6 my-4'}> {house}-uy
                 fuqarolari to'grisida ma'lumot < /h2>
