@@ -114,11 +114,12 @@ function Modalka({persons, houseId}) {
                     navigate('/')
                 }).catch((error) => {
                     console.log(error)
-                    if (error.response.data.error !== null) {
-                        alert(error.response.data.error)
-                    } else {
-                        alert("Xatolik bor !!!")
-                    }
+                alert("Xatolik bor. Zarur ma'lumotlar to'liq emas!")
+                    // if (error.response.data.error !== null) {
+                    //     alert(error.response.data.error)
+                    // } else {
+                    //     alert("Xatolik bor !!!")
+                    // }
 
                 }
             )
@@ -265,7 +266,7 @@ function Modalka({persons, houseId}) {
                             </div>
                             <div className="col text-center d-flex justify-content-end">
 
-                                <select className="form-select  form-select-sm w-75" onChange={e => {
+                                <select required className="form-select  form-select-sm w-75" onChange={e => {
                                     setAppartmentType(e.target.value)
                                 }}
                                 >
