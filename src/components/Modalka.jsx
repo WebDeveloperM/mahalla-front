@@ -193,9 +193,9 @@ function Modalka({persons, houseId}) {
                                     defaultValue={persons != null && persons[0] ? persons[0]['house_id'].street.name : ""}
                                     required type="text" onChange={e => setStreet(e.target.value)}
                                     className="form-control form-control-sm w-75"
-                                />number
+                                />
                             </div>
-                            <div className="col-2">Xonadon:</div>
+                            <div className="col-2">Xonadon raqami:</div>
                             <div className="col d-flex justify-content-end">
                                 <input required type="text" onChange={e => setNumberHouse(e.target.value)}
                                        className="form-control form-control-sm w-75"
